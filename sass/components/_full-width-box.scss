@@ -1,0 +1,17 @@
+.full-width-box {
+	background: $light-blue;
+	padding: 80px 0;
+
+	&._full-width-cta {
+
+		h2 {
+			margin-bottom: 25px;
+		}
+
+		.bttn {
+			margin-top: 25px;
+			color: #fff;
+		}
+
+	}
+}

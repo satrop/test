@@ -1,0 +1,73 @@
+.movie-cards {
+	width: 100%;
+	padding: 15px;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	margin-bottom: 30px;
+	
+	@extend %cf;
+
+	img {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	h2 {
+		font-size: 26px;
+		font-weight: 400;
+		margin-top: 15px;
+	}
+
+	&._small-card {
+		h2 {
+			font-size: 16px;
+		}
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	ul {
+		display: block;
+		width: 100%;
+		float: left;
+		margin: 10px 0;
+
+		@extend %ul-reset;
+
+		li {
+			display: inline-block;
+			font-size: 11px;
+			color: #888;
+			font-weight: bold;
+			position: relative;
+			margin-right: 10px;
+			line-height: 11px;
+			float: left;
+			
+			&::after {
+				content: '|';
+				font-weight: 300;
+				position: absolute;
+				right: -8px;
+			}
+
+			&:last-of-type::after {
+				content: '';
+				margin: 0;
+			}
+
+			a {
+				color: #888;
+
+				@extend %anim;
+
+				&:hover {
+					color: $light-blue;
+				}
+			}
+		}
+	}
+}

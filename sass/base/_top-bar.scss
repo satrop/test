@@ -1,0 +1,106 @@
+.top-bar {
+	width: 100%;
+	background: #F8F8F8;
+	border-bottom: solid 1px #ddd;
+	position: absolute;
+	padding: 5px 0 10px 0;
+	z-index: 999;
+
+	ul {
+		width: 100%;
+		margin: 0 auto;
+		border-bottom: solid 1px #ddd;
+		text-align: center;
+
+		@extend %ul-reset;
+
+		li {
+			display: inline-block;
+			width: 45px;
+			text-align: center;
+			line-height: 40px;
+			margin-left: -6px;
+
+			a {
+				font-size: 14px;
+				color: #a6a6a6;
+				display: block;
+
+				@extend %anim;
+			}
+
+			&:hover a {
+				color: $light-blue;
+			}
+		}
+
+		&.quick-links {
+			float: right;
+			border-bottom: none;
+			margin-top: 10px;
+
+			li {
+				width: auto;
+
+				a {
+					padding: 0 10px;
+					color: #707070;
+				}
+
+				&:hover a {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+//Breaks
+//===============================================
+
+@include sm {
+
+	.top-bar {
+		padding: 0;
+
+		ul {
+
+			li {
+				border: solid #ddd;
+				border-width: 0 1px 0 0;
+
+				&:first-of-type {
+					border-width: 0 1px;
+				}
+			}
+		
+			&.quick-links {
+				margin-top: 0;
+			}
+		}
+	}
+
+}
+//End of small
+//===============================================
+
+@include lg {
+
+	.top-bar {
+		height: 40px;
+		position: fixed;
+
+		ul {
+			width: auto;
+			border-bottom: none;
+			
+			li {
+				float: left;
+				margin-left: 0;
+			}
+		}
+	}
+
+}
+//End of large
+//===============================================

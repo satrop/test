@@ -1,0 +1,118 @@
+.lg-menu {
+	display: none;
+
+	@extend %ul-reset;
+
+	li {
+
+		a {
+
+			@extend %anim;
+		}
+
+		ul {
+
+			@extend %ul-reset;
+			@extend %anim;
+		}
+	}
+}
+
+//Breaks
+//===============================================
+
+@include lg {
+
+	.lg-menu {
+		display: block;
+		float: right;
+		position: relative;
+
+		li {
+			display: inline-block;
+			line-height: 90px;
+
+			a {
+				color: #888;
+				font-size: 16px;
+				letter-spacing: -0.5px;
+				display: block;
+				padding: 0 5px;
+				text-transform: lowercase;
+
+				.fa {
+					font-size: 12px;
+					padding-left: 10px;
+				}
+			}
+
+			&:hover > a, .active {
+				color: $light-blue;
+			}
+
+			ul {
+				pointer-events: none;
+				opacity: 0;
+				position: absolute;
+				background: $light-blue;
+				z-index: 999;
+
+				li {
+					display: block;
+					line-height: 45px;
+
+					a {
+						color: #fff;
+						letter-spacing: -0.5px;
+						font-size: 15px;
+						padding: 0 16px;
+						border-bottom: solid 1px rgba(255,255,255,0.08);
+
+						&:hover {
+							background: #1c1c1c;
+							color: $light-blue;
+						}
+					}
+				}
+			}
+
+			&:hover ul {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+
+		li.lg-search-trigger {
+			position: relative;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 30px;
+				background: #888;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity: .5;
+			}
+
+			a .fa {
+				font-size: 16px;
+			}
+		}
+	}
+
+}
+//End of large
+//===============================================
+
+@include xl {
+
+	.lg-menu li a {
+		font-size: 20px;
+		padding: 0 10px;
+	}
+
+}
+//End 0f extra large
+//===============================================

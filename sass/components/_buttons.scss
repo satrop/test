@@ -1,0 +1,84 @@
+.bttn {
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	background: $light-blue;
+	padding: 15px 42px;
+	margin-bottom: 6px;
+
+	@extend %anim;
+
+	&:hover {
+		color: #fff!important;
+	}
+
+	.fa {
+		margin-left: 10px;
+	}
+
+	&._md-bttn {
+		font-size: 14px;
+		padding: 5px 42px;
+	}
+
+	&._sm-bttn {
+		font-size: 12px;
+		padding: 5px 14px;
+	}
+
+	//Dark Hover
+	//========================================
+	&._blue._dark-hover:hover {
+		background: darken($light-blue, 10%);
+	}
+
+	&._pink._dark-hover:hover {
+		background: darken($hot-pink, 10%);
+	}
+
+	&._green._dark-hover:hover {
+		background: darken($lime-green, 10%);
+	}
+
+	&._orange._dark-hover:hover {
+		background: darken($burnt-orange, 10%);
+	}
+
+	&._purple._dark-hover:hover {
+		background: darken($deep-purple, 20%);
+	}
+
+	//Light Hover
+	//========================================
+	&._blue._light-hover:hover {
+		background: lighten($light-blue, 20%);
+	}
+
+	&._pink._light-hover:hover {
+		background: lighten($hot-pink, 20%);
+	}
+
+	&._green._light-hover:hover {
+		background: lighten($lime-green, 20%);
+	}
+
+	&._orange._light-hover:hover {
+		background: lighten($burnt-orange, 20%);
+	}
+
+	&._purple._light-hover:hover {
+		background: lighten($deep-purple, 20%);
+	}
+
+	&._tag {
+		font-size: 10px;
+		padding: 3px;
+		line-height: 10px;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

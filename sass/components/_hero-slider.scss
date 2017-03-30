@@ -1,0 +1,107 @@
+.full-width-image-scroller, .hero-slider-img, .full-width-image-scroller .slick-track {
+	height: 214px;
+}
+
+.hero-slider-img {
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 600px;
+	background: rgba(0,0,0,.3);
+	z-index: 2;
+
+	@extend %anim;
+}
+
+.hero-text-holder {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	text-align: center;
+	color: #fff;
+}
+
+.slick-slide {
+	position: relative;
+}
+
+.full-width-image-scroller {
+
+	&:hover {
+
+		.hero-overlay {
+			background: rgba(0,0,0,0);
+		}
+	}
+}
+
+
+
+//Breaks
+//===============================================
+
+@include md {
+
+	.full-width-image-scroller, .hero-slider-img, .full-width-image-scroller .slick-track {
+		height: 412px;
+	}
+
+	.hero-text-holder {
+
+		h1 {
+			font-size: 35px;
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			font-size: 25px;
+			margin-bottom: 10px;
+			font-weight: 300;
+		}
+
+		.bttn {
+			margin-top: 20px;
+		}
+	}
+
+}
+//End of medium
+//===============================================
+
+@include lg {
+
+	.full-width-image-scroller, .hero-slider-img, .full-width-image-scroller .slick-track {
+		height: 577px;
+	}
+
+	.hero-text-holder {
+
+		h1 {
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			font-size: 30px;
+			margin-bottom: 10px;
+			font-weight: 300;
+		}
+
+		.bttn {
+			margin-top: 20px;
+		}
+	}
+
+}
+//End of large
+//===============================================

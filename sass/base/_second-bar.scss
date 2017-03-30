@@ -1,0 +1,55 @@
+a.logo-link {
+	background: url('../img/mobile-logo-jfi.png') no-repeat;
+	background-size:  58px 49px;
+	width: 58px;
+	height: 49px;
+	display: inline-block;
+	float: left;
+}
+
+.xs-menu-trigger {
+	float: right;
+	display: inline-block;
+	margin-top: 10px;
+	color: #a9a9a9;
+}
+
+.main-nav {
+	width: 100%;
+	position: absolute;
+	padding: 20px 0;
+	z-index: 999;
+	background: #fff;
+	top: 107px;
+}
+
+//Breaks
+//===============================================
+
+@include sm {
+	.main-nav {
+		top: 82px;
+	}
+}
+
+@include lg {
+
+	.main-nav {
+		position: fixed;
+		top: 40px;
+	}
+
+	a.logo-link {
+		background: url('../img/logo-jfi.png') no-repeat;
+		background-size:  220px 90px;
+		width: 220px;
+		height: 90px;
+	}
+
+	.xs-menu-trigger {
+		display: none;
+	}
+
+}
+//End of large
+//===============================================

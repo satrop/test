@@ -1,0 +1,41 @@
+.btt-button {
+	position: fixed;
+	bottom: -40px;
+	right: 40px;
+	z-index: 999;
+	border-radius: 4px;
+	background: rgba(0,0,0,.4);
+	text-align: center;
+	display: none;
+
+	@extend %anim;
+	@include square(30px);
+
+	&.scroll {
+		bottom: 40px;
+	}
+
+	&:hover {
+		background: $light-blue;
+	}
+
+	.fa {
+		text-align: center;
+		color: #fff;
+		font-size: 14px;
+		line-height: 30px;
+	}
+}
+
+//Breaks
+//===============================================
+
+@include md {
+
+	.btt-button {
+		display: block;
+	}
+
+}
+//End of medium
+//===============================================

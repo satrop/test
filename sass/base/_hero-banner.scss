@@ -1,0 +1,165 @@
+.hero-banner {
+	position: relative;
+	top: 196px;
+	height: 150px;
+	background-position: center; 
+	background-size: cover;
+	z-index: 1;
+	overflow: hidden;
+	background: #000;
+
+	.row {
+
+		> div {
+			height: 150px;
+			position: relative;
+		}
+	}
+
+	header {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 100%;
+
+		h1 {
+			font-size: 20px;
+			line-height: 20px;
+			color: #fff;
+			text-align: center;
+			letter-spacing: -2px;		
+			font-weight: 400;
+			margin: 0;
+		}
+
+		h2 {
+			color: #fff;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+}
+
+.cover-image {
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%,-50%);
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+
+	&.pull-focus-left-down {
+		transform: translate(-70%,-40%);
+	}
+
+  	img {
+  		width: 170%;
+  		opacity: .65;
+  	}
+}
+
+//Breaks
+//===============================================
+
+@include sm {
+
+	.hero-banner {
+		top: 170px;
+
+		header {
+
+			h1 {
+				font-size: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+
+}
+//End of Small
+//===============================================
+
+@include md {
+
+	.hero-banner {
+		height: 280px;
+
+		.row {
+
+			> div {
+				height: 280px;
+			}
+		}
+
+		header {
+
+			h1 {
+				font-size: 40px;
+				line-height: 40px;
+			}
+
+			h2 {
+				font-size: 26px;
+				font-weight: 300;
+			}
+		}
+	}
+
+	.cover-image {
+
+	  	img {
+	  		width: 140%;
+	  		min-width: 100%;
+	  	}
+	}
+
+}
+//End of medium
+//===============================================
+
+@include lg {
+
+	.hero-banner {
+		height: 450px;
+
+		.row {
+
+			> div {
+				height: 450px;
+			}
+		}
+
+		header {
+			top: auto;
+			bottom: 20px;
+			transform: translate(-50%,0);
+
+			h1 {
+				font-size: 80px;
+				line-height: 80px;
+			}
+
+			h2 {
+				font-size: 36px;
+				font-weight: 400;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.cover-image {
+
+		&.pull-focus-left-down {
+			transform: translate(-50%,-50%);
+		}
+
+	  	img {
+	  		width: auto;
+	  	}
+	}
+
+}
+//End of large
+//===============================================

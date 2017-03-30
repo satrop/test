@@ -1,0 +1,64 @@
+.select-list-trigger {
+	text-indent: 20px;
+	position: relative;	
+
+	&::before {
+		content: '\f055';
+		color: #888;
+		font-size: 15px;
+		position: absolute;
+		left: -20px;
+		top: 0;
+		text-align: center;
+
+		@extend %fa;
+	}
+
+	&.active {
+
+		&::before {
+			content: '\f056';
+		}
+	}
+}
+
+.select-list {
+	display: none;
+}
+
+.option-wrap {
+
+	label {
+		font-size: 14px;
+		font-weight: 400;
+		color: #333;
+	}
+}
+
+.expanded-list-options {
+	display: none;
+}
+
+.show-more-list-items-trigger {
+	color: $light-blue;
+	font-size: 14px;
+
+	&::before {
+		content: '+ ';
+	}
+
+	&::after {
+		content: ' More';
+	}
+
+	&.active {
+		
+		&::before {
+		content: '- ';
+		}
+
+		&::after {
+			content: ' Less';
+		}
+	}
+}

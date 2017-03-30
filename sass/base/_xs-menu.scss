@@ -1,0 +1,101 @@
+.xs-menu {
+	width: 100%;
+	position: relative;
+	background: $dark-grey;
+	display: none;
+	z-index: 999;
+	top: 196px;
+
+	ul {
+		
+		@extend %ul-reset;
+
+		li {
+
+			a {
+				font-size: 12px;
+				color: rgba(255,255,255,.6);
+				display: block;
+				padding: 16px 0;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+				position: relative;
+				z-index: 1;
+				text-transform: lowercase;
+
+				.fa {
+					position: absolute;
+					right: -15px;
+					z-index: 2;
+					width: 40px;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					top: 0;
+				}
+			}
+
+			&.active > a {
+				font-weight: bold;
+				color: #fff;
+
+				.fa {
+					color: $light-blue;
+				}
+			}
+
+			ul.sub-menu {
+				display: none;
+				margin-left: 20px;
+
+				a::after {
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+.xs-search {
+	margin: 15px 0;
+
+	& input[type=text] {
+		width: 100%;
+		border: none;
+		padding: 15px 15px 15px 40px;
+		background: #171717;
+		border-radius: 2px;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.7), 0 1px 0 rgba(255,255,255,.1);
+		font-size: 12px;
+		color: #fff;
+
+		&:focus {
+			outline: none;
+		}
+
+		@include placeholder {
+			font-size: 12px;
+		}
+	}
+
+	.fa {
+		position: absolute;
+		z-index: 2;
+		line-height: 58px;
+		font-size: 14px;
+		color: rgba(255,255,255,.4);
+		margin-left: 15px;
+	}
+}
+
+//Breaks
+//===============================================
+
+@include sm {
+
+	.xs-menu {
+		top: 171px;
+	}
+
+}
+//End of small
+//===============================================

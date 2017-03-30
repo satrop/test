@@ -1,0 +1,143 @@
+.footer-links-container {
+	background: $light-grey;
+	color: #fff;
+	padding: 55px 0;
+
+	ul {
+		margin-bottom: 40px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@extend %ul-reset;
+
+		li {
+			line-height: 16px;
+			margin-bottom: 12px;
+
+			&:first-of-type a {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: #ccc;
+				font-size: 24px;
+				line-height: 24px;
+			}
+
+			a {
+			    font-family: "PT Serif";
+				color: #777;
+				font-size: 14px;
+
+				@extend %anim;
+
+				&:hover {
+					color: $light-blue;
+				}
+			}
+		}
+	}
+}
+
+.address-and-social {
+	background: $dark-grey;
+	padding: 20px 0;
+
+	ul.social {
+		float: left;
+		margin-top: 30px;
+
+		@extend %ul-reset;
+
+		li {
+			display: inline-block;
+			margin-left: 20px;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+
+			a {
+				color: #777;
+				font-size: 40px;
+				line-height: 61px;
+
+				@extend %anim;
+
+				&:hover {
+					color: $light-blue;
+				}
+			}
+		}
+	}
+}
+
+a.footer-logo {
+	width: 72px;
+	height: 61px;
+	display: inline-block;
+	float: left;
+
+	img {
+		width: 100%;
+	}
+}
+
+.address {
+	float: left;
+	display: block;
+	width: 100%;
+	margin-top: 30px;
+	color: #777;
+	font-size: 12px;
+	line-height: 20px;
+
+	a {
+		color: #777;
+
+		@extend %anim;
+
+		&:hover {
+			color: $light-blue;
+		}
+	}
+}
+
+//Breaks
+//===============================================
+
+@include md {
+
+	.address {
+		margin-left: 30px;
+		margin-top: 0;
+		display: inline-block;
+		width: auto;
+	}
+
+	.address-and-social {
+
+		ul.social {
+			float: right;
+			margin-top: 0;
+		}
+	}
+
+}
+//End of small
+//===============================================
+
+@include lg {
+
+	.footer-uls {
+		display: flex;
+
+		ul {
+			flex: 0 0 21%;
+			padding-right: 10px;
+			margin-bottom: 0;
+		}
+	}	
+
+}
+//End of large
+//===============================================
